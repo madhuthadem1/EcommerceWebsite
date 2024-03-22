@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-20T17:12:34Z" name="Suite" finished-at="2024-03-20T17:15:37Z" duration-ms="182434">
+    <groups>
+    </groups>
+    <test started-at="2024-03-20T17:12:34Z" name="Test" finished-at="2024-03-20T17:15:37Z" duration-ms="182434">
+      <class name="SeleniumAutomation.tests.LoginTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:SeleniumAutomation.tests.LoginTest@58ebfd03]" started-at="2024-03-20T22:42:34Z" name="launchApplication" finished-at="2024-03-20T22:42:40Z" duration-ms="5241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="defaultUncheckRememberMe()[pri:0, instance:SeleniumAutomation.tests.LoginTest@58ebfd03]" started-at="2024-03-20T22:42:40Z" name="defaultUncheckRememberMe" finished-at="2024-03-20T22:42:40Z" duration-ms="708" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- defaultUncheckRememberMe -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumAutomation.tests.LoginTest@58ebfd03]" started-at="2024-03-20T22:42:40Z" name="tearDown" finished-at="2024-03-20T22:42:41Z" duration-ms="164" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:SeleniumAutomation.tests.LoginTest@58ebfd03]" started-at="2024-03-20T22:42:41Z" name="launchApplication" finished-at="2024-03-20T22:42:43Z" duration-ms="2927" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="loginTest()[pri:0, instance:SeleniumAutomation.tests.LoginTest@58ebfd03]" started-at="2024-03-20T22:42:43Z" name="loginTest" finished-at="2024-03-20T22:43:28Z" duration-ms="44265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumAutomation.tests.LoginTest@58ebfd03]" started-at="2024-03-20T22:43:28Z" name="tearDown" finished-at="2024-03-20T22:43:28Z" duration-ms="170" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:SeleniumAutomation.tests.LoginTest@58ebfd03]" started-at="2024-03-20T22:43:28Z" name="launchApplication" finished-at="2024-03-20T22:43:31Z" duration-ms="2845" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="loginTestWithEmailOnly()[pri:0, instance:SeleniumAutomation.tests.LoginTest@58ebfd03]" started-at="2024-03-20T22:43:31Z" name="loginTestWithEmailOnly" finished-at="2024-03-20T22:43:33Z" duration-ms="2038" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithEmailOnly -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumAutomation.tests.LoginTest@58ebfd03]" started-at="2024-03-20T22:43:33Z" name="tearDown" finished-at="2024-03-20T22:43:33Z" duration-ms="138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:SeleniumAutomation.tests.LoginTest@58ebfd03]" started-at="2024-03-20T22:43:33Z" name="launchApplication" finished-at="2024-03-20T22:43:36Z" duration-ms="3156" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="loginTestWithPasswordOnly()[pri:0, instance:SeleniumAutomation.tests.LoginTest@58ebfd03]" started-at="2024-03-20T22:43:36Z" name="loginTestWithPasswordOnly" finished-at="2024-03-20T22:43:37Z" duration-ms="691" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithPasswordOnly -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumAutomation.tests.LoginTest@58ebfd03]" started-at="2024-03-20T22:43:37Z" name="tearDown" finished-at="2024-03-20T22:43:37Z" duration-ms="161" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- SeleniumAutomation.tests.LoginTest -->
+      <class name="SeleniumAutomation.tests.CustomersTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:SeleniumAutomation.tests.CustomersTest@5b07730f]" started-at="2024-03-20T22:43:37Z" name="launchApplication" finished-at="2024-03-20T22:43:39Z" duration-ms="1940" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="addCustomer()[pri:0, instance:SeleniumAutomation.tests.CustomersTest@5b07730f]" started-at="2024-03-20T22:43:39Z" name="addCustomer" finished-at="2024-03-20T22:44:05Z" duration-ms="26295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCustomer -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumAutomation.tests.CustomersTest@5b07730f]" started-at="2024-03-20T22:44:05Z" name="tearDown" finished-at="2024-03-20T22:44:05Z" duration-ms="196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:SeleniumAutomation.tests.CustomersTest@5b07730f]" started-at="2024-03-20T22:44:05Z" name="launchApplication" finished-at="2024-03-20T22:44:12Z" duration-ms="6612" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="emailValidationWhileAddingCustomer()[pri:0, instance:SeleniumAutomation.tests.CustomersTest@5b07730f]" started-at="2024-03-20T22:44:12Z" name="emailValidationWhileAddingCustomer" finished-at="2024-03-20T22:45:37Z" duration-ms="84677" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailValidationWhileAddingCustomer -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumAutomation.tests.CustomersTest@5b07730f]" started-at="2024-03-20T22:45:37Z" name="tearDown" finished-at="2024-03-20T22:45:37Z" duration-ms="156" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- SeleniumAutomation.tests.CustomersTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
