@@ -49,7 +49,7 @@ public class CustomersTest extends BaseTest {
 		Thread.sleep(5);
 		customersPageObject.openAddNewCustomerPage();
 		customersPageObject.saveDetails();
-		Thread.sleep(5);
+		Thread.sleep(10);
 		assertEquals(customersPageObject.getEmailMustMessage(), "'Email' must not be empty.");
 	}
 	
