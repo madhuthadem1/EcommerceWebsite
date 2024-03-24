@@ -3,6 +3,8 @@ package SeleniumAutomation.tests;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+import org.testng.Reporter;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -83,8 +85,34 @@ public class LoginTest extends BaseTest {
 		assertEquals(loginPageObject.isCheckBoxSelected(loginPageObject.getElementRememberMe())
 , false);
 		
+		
+	}
+
+	
+	@DataProvider(name="Login Credentials",parallel = false)
+	private Object[][] loginCredentials() {
+		// TODO Auto-generated method stub
+		Object[][] data = new Object[2][2];
+		data[0][0]="admin@yourstore.com";
+		data[0][1]="admin";
+		
+		data[1][0]="admin@yourstore.com";
+		data[1][1]="admin";
+		
+		return data;
+		
 	}
 	
+	
+	@Test(dataProvider = "Login Credentials")
+	public void loginTestWithDataPro(String em,String pw)  throws InterruptedException {
+		loginPageObject=new LoginPage(driver);
+		dashboardPageObject=new DashboardPage(driver);
+		Reporter.log("loginTestWithDataPro has started with value" +em +pw);
+		loginPageObject.enterEmail(em);
+		loginPageObject.enterPassword(pw);
+		loginPageObject.clickLogin();
+	}
 	
 	
 	
