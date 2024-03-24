@@ -16,7 +16,7 @@ public class CustomersTest extends BaseTest {
 	public String email="admin@yourstore.com";
 	public String password="admin";
 	
-	@Test
+	@Test(description = "This method validates adding new customer",groups = "customers funtionality",priority = 1)
 	public void addCustomer() throws InterruptedException {
 		
 		loginPageObject=new LoginPage(driver);
@@ -33,7 +33,7 @@ public class CustomersTest extends BaseTest {
 		customersPageObject.openAddNewCustomerPage();
 	}
 	
-	@Test
+	@Test(alwaysRun =true)
 	public void emailValidationWhileAddingCustomer() throws InterruptedException {
 		
 		loginPageObject=new LoginPage(driver);
@@ -52,5 +52,27 @@ public class CustomersTest extends BaseTest {
 		Thread.sleep(8);
 		assertEquals(customersPageObject.getEmailMustMessage(), "'Email' must not be empty.");
 	}
+	
+	
+	@Test(dependsOnGroups = "customers funtionality")
+	public void emailValidationWhileAddingCustomer2() throws InterruptedException {
+		
+		loginPageObject=new LoginPage(driver);
+		dashboardPageObject=new DashboardPage(driver);
+		customersPageObject=new CustomersPage(driver);
+		loginPageObject.enterEmail(email);
+		loginPageObject.enterPassword(password);
+		loginPageObject.clickLogin();
+		Thread.sleep(5);
+		dashboardPageObject.clickExpandCustomersLink();
+		Thread.sleep(5);
+		dashboardPageObject.naviagetToCustomersPage();
+		Thread.sleep(5);
+		customersPageObject.openAddNewCustomerPage();
+		customersPageObject.saveDetails();
+		Thread.sleep(8);
+		assertEquals(customersPageObject.getEmailMustMessage(), "'Email' must not be empty.");
+	}
+	
 	
 }

@@ -7,6 +7,8 @@
 </listeners>	
 	
   <test thread-count="5" name="Test">
+	  <parameter name="passwordfromxml" value="test1"></parameter>
+	  <parameter name="passwordfromxml" value="test2"></parameter>
     <classes>
       <class name="SeleniumAutomation.tests.LoginTest"/>
       <class name="SeleniumAutomation.tests.CustomersTest"/>

@@ -3,6 +3,7 @@ package SeleniumAutomation.tests;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import SeleniumAutomation.pageobjects.DashboardPage;
@@ -17,7 +18,7 @@ public class LoginTest extends BaseTest {
 	public String password="admin";
 	
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void loginTest() throws InterruptedException {
 		loginPageObject=new LoginPage(driver);
 		dashboardPageObject=new DashboardPage(driver);
@@ -32,7 +33,7 @@ public class LoginTest extends BaseTest {
 		assertEquals(driver.getTitle(), "Your store. Login");
 	}
 	
-	@Test(enabled=true)
+	@Test(priority = 1,timeOut = 5000)
 	public void loginTestWithPasswordOnly() {
 		loginPageObject=new LoginPage(driver);
 		utilObject=new Utils();
@@ -43,7 +44,18 @@ public class LoginTest extends BaseTest {
 	}
 	
 	
-	@Test(enabled=true)
+	@Test(priority = 1)
+	@Parameters({"passwordfromxml"})
+	public void loginTestWithPasswordOnlyParams(String passwordfromxml) {
+		loginPageObject=new LoginPage(driver);
+		utilObject=new Utils();
+		loginPageObject.enterPassword(passwordfromxml);
+		loginPageObject.clearDefaultEntryForEmail();
+		loginPageObject.clickLogin();
+		assertEquals(loginPageObject.getEmailValidationMessage(), "Please enter your email");
+	}
+	
+	@Test(priority = 1,invocationCount = 2)
 	public void loginTestWithEmailOnly() throws InterruptedException {
 		loginPageObject=new LoginPage(driver);
 		loginPageObject.enterEmail(email);
@@ -63,7 +75,7 @@ public class LoginTest extends BaseTest {
 	}
 	
 	
-	@Test(enabled=true)
+	@Test(dependsOnMethods = "loginTestWithEmailOnly",groups="login functinality")
 	public void defaultUncheckRememberMe() {
 		loginPageObject=new LoginPage(driver);
 		loginPageObject.enterEmail(email);
