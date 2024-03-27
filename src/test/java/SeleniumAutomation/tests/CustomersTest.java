@@ -16,7 +16,7 @@ public class CustomersTest extends BaseTest {
 	public String email="admin@yourstore.com";
 	public String password="admin";
 	
-	@Test(description = "This method validates adding new customer",groups = "customers funtionality",priority = 1)
+	@Test(description = "This method validates adding new customer",groups = {"customersfuntionality"},priority = 1)
 	public void addCustomer() throws InterruptedException {
 		
 		loginPageObject=new LoginPage(driver);
@@ -54,7 +54,7 @@ public class CustomersTest extends BaseTest {
 	}
 	
 	
-	@Test(dependsOnGroups = "customers funtionality")
+	@Test(dependsOnGroups = {"customersfuntionality"})
 	public void emailValidationWhileAddingCustomer2() throws InterruptedException {
 		
 		loginPageObject=new LoginPage(driver);

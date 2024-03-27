@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import SeleniumAutomation.pageobjects.DashboardPage;
 import SeleniumAutomation.pageobjects.LoginPage;
 
-public class LoginTest extends BaseTest {
+public class LoginTest2 extends BaseTest {
 	
 	public LoginPage loginPageObject;
 	public DashboardPage dashboardPageObject;
@@ -20,7 +20,8 @@ public class LoginTest extends BaseTest {
 	public String password="admin";
 	
 	
-	@Test(enabled=false)
+//	@Test(enabled=false)
+	@Test (enabled=false)
 	public void loginTest() throws InterruptedException {
 		loginPageObject=new LoginPage(driver);
 		dashboardPageObject=new DashboardPage(driver);
@@ -35,7 +36,8 @@ public class LoginTest extends BaseTest {
 		assertEquals(driver.getTitle(), "Your store. Login");
 	}
 	
-	@Test(priority = 1,timeOut = 5000)
+//	@Test(priority = 1,timeOut = 5000)
+	@Test(timeOut = 5000)
 	public void loginTestWithPasswordOnly() {
 		loginPageObject=new LoginPage(driver);
 		utilObject=new Utils();
@@ -46,7 +48,8 @@ public class LoginTest extends BaseTest {
 	}
 	
 	
-	@Test(priority = 1)
+//	@Test(priority = 1)
+	@Test (priority = -1)
 	@Parameters({"passwordfromxml"})
 	public void loginTestWithPasswordOnlyParams(String passwordfromxml) {
 		loginPageObject=new LoginPage(driver);
@@ -57,9 +60,11 @@ public class LoginTest extends BaseTest {
 		assertEquals(loginPageObject.getEmailValidationMessage(), "Please enter your email");
 	}
 	
-	@Test(priority = 1,invocationCount = 2)
+//	@Test(priority = 1,invocationCount = 2)
+	@Test(invocationCount = 2,priority = 1)
 	public void loginTestWithEmailOnly() throws InterruptedException {
 		loginPageObject=new LoginPage(driver);
+		String email=null;
 		loginPageObject.enterEmail(email);
 		loginPageObject.clearDefaultEntryForPassword();
 		loginPageObject.clickLogin();
@@ -76,8 +81,8 @@ public class LoginTest extends BaseTest {
 			
 	}
 	
-	
-	@Test(dependsOnMethods = {"loginTestWithEmailOnly"},groups={"loginfunctinality"})
+//	@Test(dependsOnMethods = {"loginTestWithEmailOnly"},groups={"loginfunctinality"})	
+	@Test(priority = 1,dependsOnMethods = {"loginTestWithEmailOnly"})
 	public void defaultUncheckRememberMe() {
 		loginPageObject=new LoginPage(driver);
 		loginPageObject.enterEmail(email);

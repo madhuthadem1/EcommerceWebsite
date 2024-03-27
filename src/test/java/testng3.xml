@@ -10,8 +10,7 @@
 	  <parameter name="passwordfromxml" value="test1"></parameter>
 	  <parameter name="passwordfromxml" value="test2"></parameter>
     <classes>
-    <class name="SeleniumAutomation.tests.LoginTest"/>
-      <class name="SeleniumAutomation.tests.CustomersTest"/>
+    <class name="SeleniumAutomation.tests.LoginTest2"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
