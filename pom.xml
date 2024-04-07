@@ -59,11 +59,6 @@
     <version>5.2.3</version>
 </dependency>
 
-  	<dependency>
-  		<groupId>MavenProjectGroup</groupId>
-  		<artifactId>MavenProjectArtifact</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
   </dependencies>
   
   <profiles>
